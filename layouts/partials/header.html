@@ -1,14 +1,17 @@
 <header>
 	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}<br>
-	== <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> ==<br>
+	== <a href="{{ .LanguagePrefix }}">{{ .Site.Title }}</a> == <br>
+	{{ strings.Repeat ( .Site.Title | len | add 6 ) "-" }}<br>
+	<div style="float:left;"><a href="/pt">Português</a> ==or== <a href="/en">English</a></div>
+	<br>
 	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}
 	<div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
 	<p>
 	<nav>
-			<a href="/"><b>Start</b></a>.
+			<a href="{{ .LanguagePrefix }}"><b>Posts</b></a>.
 			{{ with .Site.Menus.main }}
 			{{ range . }}
-			<a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>.
+			<a href="{{ .URL | relLangURL }}"><b>{{ .Name }}</b></a>.
 			{{ end }}
 	</nav>
 	</p>
