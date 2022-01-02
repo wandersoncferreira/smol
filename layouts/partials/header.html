@@ -1,10 +1,7 @@
 <header>
-	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}<br>
-	== <a href="{{ .LanguagePrefix }}">{{ .Site.Title }}</a> == <br>
-	{{ strings.Repeat ( .Site.Title | len | add 6 ) "-" }}<br>
-	<div style="float:left;"><a href="/pt">Português</a> ==or== <a href="/en">English</a></div>
+	<a href="{{ .LanguagePrefix }}">{{ .Site.Title }}</a>  - <a href="/pt">pt-BR</a> / <a href="/en">en</a>
 	<br>
-	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}
+	{{ strings.Repeat ( .Site.Title | len | add 13 ) "-" }}
 	<div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
 	<p>
 	<nav>
