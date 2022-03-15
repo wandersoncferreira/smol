@@ -1,16 +1,16 @@
 <header>
-	<a href="{{ .LanguagePrefix }}">{{ .Site.Title }}</a>  - <a href="/pt">pt-BR</a> / <a href="/en">en</a>
-	<br>
-	{{ strings.Repeat ( .Site.Title | len | add 13 ) "-" }}
-	<div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
-	<p>
-	<nav>
-			<a href="{{ .LanguagePrefix }}"><b>Posts</b></a>.
-			{{ with .Site.Menus.main }}
-			{{ range . }}
-			<a href="{{ .URL | relLangURL }}"><b>{{ .Name }}</b></a>.
-			{{ end }}
-	</nav>
-	</p>
-	{{ end }}
+        <a href="">{{ .Site.Title }}</a>  - <a href="/pt">pt-BR</a> / <a href="/en">en</a>
+        <br>
+        {{ strings.Repeat ( .Site.Title | len | add 13 ) "-" }}
+        <div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
+        <p>
+        <nav>
+                        <a href=""><b>Posts</b></a>.
+                        {{ with .Site.Menus.main }}
+                        {{ range . }}
+                        <a href="{{ .URL | relLangURL }}"><b>{{ .Name }}</b></a>.
+                        {{ end }}
+        </nav>
+        </p>
+        {{ end }}
 </header>
