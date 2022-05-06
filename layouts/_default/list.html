@@ -11,15 +11,15 @@
 	{{ range .Paginator.Pages }}
 	{{ if eq $listtitle "Posts" }}
 	<article>
-		<h1>
+		<h3>
 			{{ .Date.Format "2006-01-02" }} <a href="{{ .RelPermalink }}">{{.Title }}</a>
-		</h1>
+		</h3>
 	</article>
 	{{ else if eq $listtitle "Bookmarks" }}
 	<article>
-		<h1>
+		<h3>
 			{{ .Date.Format "2006-01-02" }} <a href="{{ .RelPermalink }}">{{.Title }}</a>
-		</h1>
+		</h3>
 	</article>
 	{{ end }}
 	{{ end }}
