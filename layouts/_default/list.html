@@ -27,6 +27,13 @@
 			{{ .Date.Format "2006-01-02" }} <a href="{{ .RelPermalink }}">{{.Title }}</a>
 		</h3>
 	</article>
+
+	{{ else if ne $listtitle "Tags" }}
+	<article>
+		<h3>
+			{{ .Date.Format "2006-01-02" }} <a href="{{ .RelPermalink }}">{{.Title }}</a>
+		</h3>
+	</article>
 	{{ end }}
 	{{ end }}
 
