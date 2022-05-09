@@ -3,7 +3,9 @@
 
 		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
 		{{ range $paginator.Pages }}
+		{{ if not (in .Params.tags  "tbd")}}
 			{{ .Render "summary" }}
+		{{ end }}
 		{{ end }}
 		{{ partial "pagination.html" . }}
 	</main>
